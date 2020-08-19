@@ -1,2 +1,2 @@
-khu-back/khu-venv/*
-khu-front/node-modules/*
+khu-back/khu-venv/
+khu-front/node_modules/

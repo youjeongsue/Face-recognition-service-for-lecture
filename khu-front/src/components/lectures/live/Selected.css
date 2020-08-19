@@ -1,0 +1,23 @@
+.selected {
+    margin: 0px 10px;
+}
+
+.info {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 5px;
+    border: 1px solid gray;
+}
+
+th {
+    background-color: #ffdb4d;
+}

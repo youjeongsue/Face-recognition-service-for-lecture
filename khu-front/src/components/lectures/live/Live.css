@@ -1,0 +1,84 @@
+.live {
+    overflow: hidden;
+}
+
+/* screen */
+.screen-wrapper {
+    /* background-color: aqua; */
+    float: left;
+    padding: 10px 10px;
+}
+
+.screen {
+    /* background-color: aquamarine; */
+    margin-bottom: 25px;
+    width: 700px;
+}
+
+.invalid-screen {
+    width: 700px;
+    height: 400px;
+    background-color: #cccccc;
+    text-align: center;
+    padding-top: 200px;
+    font-size: large;
+}
+
+/* ip form */
+.ip-button {
+    background-color: #44546A;
+    width: 80px;
+    height: 30px;
+    border: 0 none transparent;
+    border-radius: 5px;
+    margin-right: 5px;
+    color: white;
+}
+
+.ip-text {
+    width: 180px;
+    height: 30px;
+    border: 1.5px solid gray;
+    margin-right: 5px;
+    padding-left: 7px;
+}
+
+.ip-checkbox {
+    width: 15px;
+    height: 15px;
+    padding-top: 20px;
+}
+
+/* info */
+.info-wrapper {
+    /* background-color: blueviolet; */
+    float: left;
+    width: 400px;
+    margin-left: 20px;
+    padding: 0 10px;
+}
+
+.info-wrapper p {
+    text-align: center;
+    font-size: large;
+}
+
+/* 할까말까... */
+.info-wrapper p::after {
+    content: "";
+    display: block;
+    width: 360px;
+    border-bottom: 1px solid #bcbcbc;
+    margin: 6px 0px;
+}
+
+.attendance {
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    /* background-color: violet; */
+}
+
+.selected {
+    padding: 10px 10px;
+    /* background-color: palevioletred; */
+}

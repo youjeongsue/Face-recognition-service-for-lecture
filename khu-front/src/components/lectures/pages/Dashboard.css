@@ -1,0 +1,28 @@
+.dashboard-wrapper {
+    overflow: hidden;
+}
+
+.lecture-name {
+    font-size: x-large;
+}
+
+.lecture-name:after {
+    content: "";
+    display: block;
+    width: 85vw;
+    border-bottom: 1px solid #bcbcbc;
+    margin: 20px 0px;
+}
+
+.sidebar-wrapper {
+    float: left;
+    width: 110px;
+    height: calc(100vh - 50px);
+    background-color: #E7E6E6;
+}
+
+.dashboard {
+    float: left;
+    width: calc(100vw - 110px);
+    padding: 30px 30px;
+}

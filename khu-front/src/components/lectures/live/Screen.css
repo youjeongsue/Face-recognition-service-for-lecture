@@ -1,0 +1,29 @@
+.screen{
+    position: relative;
+    width: 700px;
+}
+
+.screen-video{
+    width: 700px;
+    height: 400px;
+}
+
+.screen-settings{
+    width: 700px;
+    height: 200px;
+}
+
+.button {
+    position: absolute;
+    align-items: center;
+    display: inline-block;
+    
+    background-color: transparent;
+    border: 3px solid #990000;
+    color: #990000;
+    text-align: center;
+}
+
+.ghost {
+    opacity: 0;
+}
