@@ -1,5 +1,6 @@
 .live {
     overflow: hidden;
+    width: 1100px;
 }
 
 /* screen */
@@ -53,7 +54,7 @@
 .info-wrapper {
     /* background-color: blueviolet; */
     float: left;
-    width: 400px;
+    width: 350px;
     margin-left: 20px;
     padding: 0 10px;
 }
@@ -61,13 +62,14 @@
 .info-wrapper p {
     text-align: center;
     font-size: large;
+    font-weight: 600;
 }
 
 /* 할까말까... */
 .info-wrapper p::after {
     content: "";
     display: block;
-    width: 360px;
+    width: 300px;
     border-bottom: 1px solid #bcbcbc;
     margin: 6px 0px;
 }

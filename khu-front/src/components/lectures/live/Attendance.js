@@ -2,7 +2,7 @@ import React from 'react';
 
 const Attendance = ({students, currentStudents}) => {
 
-    function showStudents(){
+    function oldShowStudents(){
         try{
             return students.map(student => {
                 return (currentStudents.find(function (n) {
@@ -15,27 +15,48 @@ const Attendance = ({students, currentStudents}) => {
         }
     }
 
-    // function showStudents(){
-    //     try{
-    //         return (
-    //             <table>
-    //                 <thead>
-    //                     <tr>
-    //                         <th>번호</th>
-    //                         <th>이름</th>
-    //                         <th>학번</th>
-    //                         <th>출결</th>
-    //                     </tr>
-    //                 </thead>
-    //                 <tbody>
-    //                     {}
-    //                 </tbody>
-    //             </table>
-    //         )
-    //     } catch (e) {
-    //         return null;
-    //     }
-    // }
+    function showStudents(){
+        try{
+            return (
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>이름</th>
+                                <th>학번</th>
+                                <th>출결</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {students.map((student, index) => {
+                                return (currentStudents.find(function (n) {
+                                    return n === String(student['id']-1) }))
+                                    ? (
+                                        <tr>
+                                            <td>{index}</td>
+                                            <td>{student['name']}</td>
+                                            <td>{student['student_num']}</td>
+                                            <td>O</td>
+                                        </tr>
+                                    )
+                                    : (
+                                        <tr>
+                                            <td>{index}</td>
+                                            <td>{student['name']}</td>
+                                            <td>{student['student_num']}</td>
+                                            <td>X</td>
+                                        </tr>
+                                    )
+                            })}
+                        </tbody>
+                    </table>
+                </div>
+            )
+        } catch (e) {
+            return null;
+        }
+    }
 
     return (
         <div>

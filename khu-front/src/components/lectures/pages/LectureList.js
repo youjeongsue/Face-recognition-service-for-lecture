@@ -63,8 +63,10 @@ function LectureList(){
             <div className='ui relaxed grid'>
                 {lectures.map(lecture => (
                     <div className='ui item' key={lecture.id}>
-                        <Link to={`/dashboard/${lecture.id}`}>
-                            <div className='link'>{lecture.lecture_name}</div>
+                        <Link to={`/dashboard/${lecture.id}/live`}>
+                            <div className='icon'>
+                                <div className='link'>{lecture.lecture_name}</div>
+                            </div>
                         </Link>
                     </div>
                 ))}

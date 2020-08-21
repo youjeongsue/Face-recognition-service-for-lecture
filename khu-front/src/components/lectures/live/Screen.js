@@ -6,7 +6,7 @@ const Screen = ({ lecture_id, ip, boxToggleOn, box, onSelectedChange }) => {
 
     const getStudent = (landmarks) => {
         onSelectedChange(landmarks);
-        // console.log(landmarks);
+        console.log('click');
     }
 
     const showFrame = () => {

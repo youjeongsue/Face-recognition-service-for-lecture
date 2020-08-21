@@ -1,41 +1,41 @@
-import React , { useState, useEffect } from 'react';
+import React , { useState, useEffect, useRef } from 'react';
 import axios from 'axios'
 
 import './Selected.css';
 
-const Selected = ({ landmarks }) => {
+const Selected = ({ ip, landmarks }) => {
     const [ id, setId ] = useState(null);
     const [ student, setStudent ] = useState(null);
 
-    const getID = async () => {
-        // console.log(landmarks);
-        try {
-            const response = await axios.get(
-                `http://35.201.156.40:1219/modelin?ip=http://112.187.144.65:2020/shot.jpg&landmark=${landmarks}`
-            );
-            setId(response.data.id);
-            getStudent();
-        } catch (e) {
-            //error...
-        }
-    }
-
-    const getStudent = async () => {
-        // console.log(id);
-        try {
-            const response = await axios.get(`/student/${parseInt(id)+1}/`);
-            setStudent(response.data.student);
-        } catch (e) {
-            //error...
-        }
-    }
-
     useEffect(() => {
+        const getID =  async () => {
+            console.log(landmarks);
+            try {
+                const response = await axios.get(
+                    `http://35.201.156.40:1219/modelin?ip=http://${ip}/shot.jpg&landmark=${landmarks}`
+                );
+                setId(response.data.id);
+                getStudent();
+            } catch (e) {
+                //error...
+            }
+        }
+    
+        //id가 같으면 useMemo 사용할 수 있을 것 같다!
+        const getStudent = async () => {
+            console.log(id);
+            try {
+                const response = await axios.get(`/student/${parseInt(id)+1}/`);
+                setStudent(response.data.student);
+            } catch (e) {
+                //error...
+            }
+        }
+
         getID();
-    }, id);
+    }, [landmarks]);
 
     const showStudent = (student) => {
-        getID();
         if (!student) {
             return <div>없음</div>;
         } else {

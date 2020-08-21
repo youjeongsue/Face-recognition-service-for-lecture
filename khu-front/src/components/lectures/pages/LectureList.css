@@ -2,6 +2,15 @@
     padding: 100px 80px;
 }
 
+.icon {
+    width: 160px;
+    height: 100px;
+    background-size: cover;
+    background-image: url('../../../static/folder.png');
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+
 .link {
     color: black;
+    padding: 110px 0;
 }

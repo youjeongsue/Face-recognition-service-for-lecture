@@ -23,6 +23,6 @@
 
 .dashboard {
     float: left;
-    width: calc(100vw - 110px);
+    width: calc(100vw - 300px);
     padding: 30px 30px;
 }

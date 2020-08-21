@@ -70,7 +70,7 @@ class Live extends Component{
 
     getBox = () => {
         const self = this;
-        axios.get('http://35.201.156.40:1219/modelfr?ip=http://112.187.144.65:2020/shot.jpg')
+        axios.get(`http://35.201.156.40:1219/modelfr?ip=http://${this.state.ip}/shot.jpg`)
             .then( response => {
                 self.setState({
                     box:response.data.box
@@ -83,7 +83,7 @@ class Live extends Component{
 
     getCurrentStudent = () => {
         const self = this;
-        axios.get('http://35.201.156.40:1219/modelat?ip=http://112.187.144.65:2020/shot.jpg')
+        axios.get(`http://35.201.156.40:1219/modelat?ip=http://${this.state.ip}/shot.jpg`)
             .then( response => {
                 self.setState({
                     currentStudents:response.data.id
@@ -121,6 +121,7 @@ class Live extends Component{
 
     render(){
         const {
+            ip,
             boxToggleOn,
             students,
             currentStudents,
@@ -159,12 +160,12 @@ class Live extends Component{
                 </div>
                 <div className="info-wrapper">
                     <div className='attendance'>
-                        <p>--- 출석 명단 ---</p>
+                        <p>출석 명단</p>
                         <Attendance students={students} currentStudents={currentStudents}/>
                     </div>
                     <div className='selected'>
-                        <p>--- 선택한 학생 ---</p>
-                        <Selected landmarks={landmarks} />
+                        <p>학생 정보</p>
+                        <Selected ip={ip} landmarks={landmarks} />
                     </div>
                 </div>
             </div>
