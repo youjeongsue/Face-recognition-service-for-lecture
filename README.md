@@ -15,4 +15,4 @@
 <b>→ 웹페이지 제작(FE/BE) 및 얼굴인식 모델과 연결 부분 담당<b/>
 
 ### 사용 기술
-Django, SQLite, React, Ajax, SemanticUI
+Django, SQLite, React/create-react-app, Redux, SemanticUI
