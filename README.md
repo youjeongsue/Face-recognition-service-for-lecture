@@ -16,3 +16,7 @@
 
 ### 사용 기술
 Django, SQLite, React, Redux, SemanticUI
+
+### 수상
+1. 경희대학교 캡스톤디자인 경진대회 최우수상
+2. 경희대학교 캠퍼스타운(창업) 1차 
