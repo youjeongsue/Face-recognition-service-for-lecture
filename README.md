@@ -12,7 +12,7 @@
 - 실시간 얼굴 인식 및 얼굴 위치에 box button 생성
 - 출석 체크
 - button 클릭 시 해당 학생의 정보 제공<br/>
-<b>→ 웹페이지 제작(FE/BE) 및 얼굴인식 모델과 연결 부분 담당<b/>
+<b>→ 웹페이지 제작(FE/BE) 및 얼굴인식 모델과 연결 부분 담당</b>
 
 ### 사용 기술
-Django, SQLite, React/create-react-app, Redux, SemanticUI
+Django, SQLite, React, Redux, SemanticUI
